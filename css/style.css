@@ -1,0 +1,19 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.serif {
+  font-family: 'EB Garamond', serif;
+}
+
+.mono {
+  font-family: 'Source Code Pro', monospace;
+}
+
+a {
+  color: #8f2424;
+}
+
+a:hover {
+  color: #6b1818;
+}
