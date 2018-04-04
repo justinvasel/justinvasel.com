@@ -27,7 +27,13 @@
           <h5 class="serif text-center text-muted">~ <em>Physics Ph.D. Candidate</em> ~</h5>
         </div>
       </div>
-      <br><br><br><br><br>
+      <br><br><br><br>
+      <div class="row">
+        <div class="col-12">
+          <div class="text-center" id="feynman"></div>
+        </div>
+      </div>
+      <br>
       <div class="row">
         <div class="col-12">
           <h3 class="serif text-center">Remodeling. Stay tuned...</h3>
@@ -48,8 +54,38 @@
 
 
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/feyn.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/fa.js') }}"></script>
+
+    <script>
+      $(document).ready(function() {
+        config = {
+          description: 'A Feynman Diagram',
+          width:  300,
+          height: 120,
+          incoming: {
+            i1: '0,90'
+          },
+          outgoing: {
+            o1: '300,90'
+          },
+          vertex: {
+            v1: '85,90',
+            v2: '200,90'
+          },
+          fermion: {
+            line: 'i1-v1-v2-o1'
+          },
+          photon: {
+            arc: 'v2-v1'
+          },
+          thickness: 3
+        };
+
+        $('#feynman').feyn(config);
+      });
+    </script>
   </body>
 </html>
