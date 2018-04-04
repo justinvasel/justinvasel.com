@@ -29,7 +29,7 @@ pip install virtualenv
 
 # Do either A or B below to install required libraries
 
-# A) Install the components automatically
+# A) Install the components automagically
 make
 
 # B) Do it manually if you want
@@ -41,7 +41,10 @@ pip install -r requirements.txt
 python debug.py
 ```
 
-Once that is up and running. Point your browser to `127.0.0.1:5002`.
+Once that is up and running. Point your browser to `http://127.0.0.1:5002`.
+
+**Note:** In future, you'll need to set up the local environment with
+`source env/bin/activate` before spinning up the server.
 
 This project follows common Flask practices. HTML files are in `app/templates`
 and use Jinja templates. Static assets (like css, js, etc) are in `app/static`.
