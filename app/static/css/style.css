@@ -19,3 +19,11 @@ a {
 a:hover {
   color: #6b1818;
 }
+
+.social-media-links a {
+  color: #666;
+}
+
+.social-media-links a:hover {
+  color: #111;
+}

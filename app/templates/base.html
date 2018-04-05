@@ -30,6 +30,23 @@
         <div class="col-12">
           <h1 class="display-3 serif text-center">Justin Vasel</h1>
           <h6 class="serif text-center text-muted">~ <em>Physics Ph.D. Candidate</em> ~</h6>
+          <h6 class="text-center social-media-links">
+            <a href="https://www.twitter.com/justinvasel" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a> &nbsp;
+            <a href="https://www.github.com/justinvasel" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Github">
+              <i class="fab fa-github"></i>
+            </a> &nbsp;
+            <a href="https://www.linkedin.com/in/justinvasel/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a> &nbsp;
+            <a href="https://inspirehep.net/author/profile/J.Vasel.1" target="_blank" data-toggle="tooltip" data-placement="bottom" title="INSPIRE-HEP">
+              <i class="fab fa-react"></i>
+            </a> &nbsp;
+            <a href="https://www.goodreads.com/justinvasel" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Goodreads">
+              <i class="fab fa-goodreads"></i>
+            </a> &nbsp;
+          </h6>
         </div>
       </div>
 
@@ -55,16 +72,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Contact</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.twitter.com/justinvasel" target="_blank"><i class="fab fa-twitter"></i></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.github.com/justinvasel" target="_blank"><i class="fab fa-github"></i></a>
-        </li>
       </ul>
     </div>
 
-    <br>
     {% block content %}
     <!-- Page content goes here -->
     {% endblock %}
@@ -96,5 +106,11 @@
     <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/fa.js') }}"></script>
+
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
   </body>
 </html>
