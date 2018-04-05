@@ -27,3 +27,11 @@ a:hover {
 .social-media-links a:hover {
   color: #111;
 }
+
+.bg-nav {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.bg-page {
+  background-color: rgba(255, 255, 255, 0.3);
+}
