@@ -38,7 +38,7 @@ source env/bin/activate
 pip install -r requirements.txt
 
 # Spin up the development version of the application
-python debug.py
+python serve.py
 ```
 
 Once that is up and running. Point your browser to `http://127.0.0.1:5002`.
