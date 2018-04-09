@@ -4,6 +4,10 @@ body {
   background-repeat: repeat;
 }
 
+.readable {
+  font-size: 20px;
+}
+
 .serif {
   font-family: 'EB Garamond', serif;
 }
