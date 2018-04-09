@@ -15,6 +15,10 @@ def about():
 @app.route('/code')
 def code():
     return render_template('code.html')
+@app.route('/cv')
+def cv():
+    return render_template('cv.html', title='Curriculum Vitae')
+
 
 
 # ERROR HANDLING
