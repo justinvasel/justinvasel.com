@@ -14,7 +14,7 @@ def about():
 
 @app.route('/cat')
 def cat():
-    return render_template('cat.html')
+    return render_template('cat.html', title='CAT!')
 
 @app.route('/code')
 def code():
@@ -35,6 +35,10 @@ def events():
     past_events = db.session.query(models.Event, models.EventType).join(models.EventType, models.EventType.id == models.Event.type).filter(models.Event.date < datetime.utcnow()).order_by(models.Event.date.desc()).all()
 
     return render_template('events.html', title='Events', upcoming_events=upcoming_events, past_events=past_events)
+
+@app.route('/outreach')
+def outreach():
+    return render_template('outreach.html', title='Outreach')
 
 @app.route('/research')
 def research():
