@@ -16,6 +16,10 @@ def about():
 def code():
     return render_template('code.html', title='Code')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html', title='Contact')
+
 @app.route('/cv')
 def cv():
     return render_template('cv.html', title='Curriculum Vitae')
