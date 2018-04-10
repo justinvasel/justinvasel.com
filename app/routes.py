@@ -12,6 +12,10 @@ def index():
 def about():
     return render_template('index.html')
 
+@app.route('/cat')
+def cat():
+    return render_template('cat.html')
+
 @app.route('/code')
 def code():
     return render_template('code.html', title='Code')

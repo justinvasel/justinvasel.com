@@ -1,0 +1,67 @@
+{% extends "page.html" %}
+
+{% block content %}
+
+<div class="container serif bg-page pt-4 pb-4 rounded-bottom">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>Congratulations! You found the cat!</h1>
+    </div>
+  </div>
+
+  <div class="container-fluid m-0 p-0">
+    <div id="ash-slideshow" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#ash-slideshow" data-slide-to="0" class="active"></li>
+        <li data-target="#ash-slideshow" data-slide-to="1"></li>
+        <li data-target="#ash-slideshow" data-slide-to="2"></li>
+        <li data-target="#ash-slideshow" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100 rounded" src="{{ url_for('static', filename='img/ash_1.jpg') }}" alt="Ash, a grey cat comfortably hiding in a blanket pile.">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 rounded" src="{{ url_for('static', filename='img/ash_2.jpg') }}" alt="Ash, a grey cat sleeping on a bed with his little tongue sticking out.">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 rounded" src="{{ url_for('static', filename='img/ash_3.jpg') }}" alt="Ash, a grey cat staring at the camera. Monochrome lens makes it particularly artistic.">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 rounded" src="{{ url_for('static', filename='img/ash_4.jpg') }}" alt="Ash, a grey cat standing alert while being bathed in a beam sunlight.">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#ash-slideshow" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#ash-slideshow" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <hr>
+  <div class="row ">
+    <div class="col-6">
+      <p class="readable">
+        This is Ash. He is my Russian Blue cat, named after Ash Williams from
+        the Evil Dead. He looks calm but he is really quite sassy.
+      </p>
+      <p class="readable">
+        Fig. 1 depicts our typical dynamic.
+      </p>
+    </div>
+    <div class="col-6">
+      <figure class="figure">
+        <img width="100%" class="figure-img border rounded" src="{{ url_for('static', filename='img/cat_yell.jpg') }}" alt="A cartoon diagram of a human and a cat screaming at each other. A dramatic re-enactment of my and Ash's dynamic.">
+        <figcaption class="figure-caption">
+          <em>Fig. 1:</em> Dramatic re-enactment of me and Ash arguing about something or another. <em>(Picture credit: eHow)</em>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
