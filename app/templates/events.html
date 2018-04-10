@@ -57,7 +57,7 @@
         <tbody>
           {% for event in upcoming_events %}
           <tr>
-            <td style="min-width: 120px;">{{ event[0].date }}</td>
+            <td class="date" style="min-width: 120px;">{{ event[0].date }}</td>
             <td>
               {{ event[0].name }} —
               <span class="text-nowrap text-muted">{{ event[0].location }}</span>
@@ -103,7 +103,7 @@
         <tbody>
           {% for event in past_events %}
           <tr>
-            <td style="min-width: 120px;">{{ event[0].date }}</td>
+            <td class="date" style="min-width: 120px;">{{ event[0].date }}</td>
             <td>
               {{ event[0].name }} —
               <span class="text-nowrap text-muted">{{ event[0].location }}</span>

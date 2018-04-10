@@ -48,6 +48,17 @@
   <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
   <script src="{{ url_for('static', filename='js/fa.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/moment.min.js') }}"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.date').each(function(index, element){
+        date = moment($(this).text(), "YYYY-MM-DD");
+        $(this).text(date.format("YYYY MMMM D"));
+      });
+    });
+  </script>
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
 </html>
