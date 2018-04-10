@@ -4,3 +4,6 @@
 
 # Directory structure
 env
+
+# Data-related
+app/data/app.db
