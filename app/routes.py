@@ -1,6 +1,6 @@
 from flask import render_template, redirect, request
-
-from app import app
+from app import app, models, db
+from datetime import datetime
 
 # - - - Routes - - -
 # .............................................................................
@@ -26,7 +26,11 @@ def cv():
 
 @app.route('/events')
 def events():
-    return render_template('events.html', title='Events')
+    upcoming_events = db.session.query(models.Event, models.EventType).join(models.EventType, models.EventType.id == models.Event.type).filter(models.Event.date >= datetime.utcnow()).order_by(models.Event.date.asc()).all()
+
+    past_events = db.session.query(models.Event, models.EventType).join(models.EventType, models.EventType.id == models.Event.type).filter(models.Event.date < datetime.utcnow()).order_by(models.Event.date.desc()).all()
+
+    return render_template('events.html', title='Events', upcoming_events=upcoming_events, past_events=past_events)
 
 @app.route('/research')
 def research():

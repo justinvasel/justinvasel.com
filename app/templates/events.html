@@ -8,10 +8,10 @@
       <h1>Events</h1>
 
       <p class="readable">
-        I love giving talks and sharing the excitement of my work with others.
-        Whether it's in front of a general audience of non-scientists or a
-        department colloquim full of particle physicists, I am always happy
-        to talk about awesome physics.
+        I love sharing the excitement of my work with others. Whether it's in
+        front of a general audience of non-scientists or a department colloquim
+        full of particle physicists, I am always happy to talk about awesome
+        physics.
       </p>
 
       <p class="readable">
@@ -20,17 +20,33 @@
         from you. Pop over to my <a href="/contact">contact page</a> for more
         information.
       </p>
+
+      <p class="text-muted">
+        Note: I'll make the slides for many of these talks available here soon.
+        Just need to find a little time to upload them all...
+      </p>
     </div>
   </div>
 
+  {% if upcoming_events | length > 0 %}
   <hr>
   <div class="row">
     <div class="col-12">
-      <h2>Upcoming</h2>
+      <span class="float-right text-muted">
+        {{ upcoming_events | length }} upcoming
+        {% if upcoming_events | length == 1 %}
+        event
+        {% else %}
+        events
+        {% endif %}
+      </span>
+
+      <h2>
+        Upcoming
+      </h2>
 
       <br>
-      <h4>2018</h4>
-      <table class="table">
+      <table class="table table-sm">
         <thead>
           <tr>
             <th>Date</th>
@@ -39,30 +55,44 @@
           </tr>
         </thead>
         <tbody>
+          {% for event in upcoming_events %}
           <tr>
-            <td>April 16</td>
-            <td>American Physical Society April Meeting; Columbus, OH</td>
-            <td>Talk: <em>"Supernova Neutrino Detection at the NOvA Experiment"</em></td>
+            <td style="min-width: 120px;">{{ event[0].date }}</td>
+            <td>
+              {{ event[0].name }} —
+              <span class="text-nowrap text-muted">{{ event[0].location }}</span>
+            </td>
+            <td>
+              {% if event[0].type %}
+              <strong>{{ event[1].name | safe | capitalize }}</strong> —
+              {% endif %}
+              {{ event[0].description | safe }}
+            </td>
           </tr>
-          <tr>
-            <td>June 4–9</td>
-            <td>Neutrino 2018; Heidleberg, Germany</td>
-            <td>Poster: <em>"Detection of Galactic Supernova Neutrinos at the NOvA Experiment" (pending acceptance)</em></td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
-
     </div>
   </div>
+  {% endif %}
 
+  {% if past_events | length > 0 %}
   <hr>
   <div class="row">
     <div class="col-12">
+      <span class="float-right text-muted">
+        {{ past_events | length }} past
+        {% if past_events | length == 1 %}
+        event
+        {% else %}
+        events
+        {% endif %}
+      </span>
+
       <h2>Past</h2>
 
       <br>
-      <h4>2018</h4>
-      <table class="table">
+      <table class="table table-sm">
         <thead>
           <tr>
             <th>Date</th>
@@ -71,21 +101,26 @@
           </tr>
         </thead>
         <tbody>
+          {% for event in past_events %}
           <tr>
-            <td>March 25</td>
-            <td>PGSC Five Minute Thesis; Indiana University</td>
-            <td>Chalk talk: <em>"My thesis in five minutes"</em></td>
+            <td style="min-width: 120px;">{{ event[0].date }}</td>
+            <td>
+              {{ event[0].name }} —
+              <span class="text-nowrap text-muted">{{ event[0].location }}</span>
+            </td>
+            <td>
+              {% if event[0].type %}
+              <strong>{{ event[1].name | safe | capitalize }}</strong> —
+              {% endif %}
+              {{ event[0].description | safe }}
+            </td>
           </tr>
-          <tr>
-            <td>February 7</td>
-            <td>GPSG Talks; Bloomington, Indiana</td>
-            <td>Talk: <em>"Supernova and Neutrinos: Where Puny Particles Meet Enormous Explosion"</em></td>
-          </tr>
+          {% endfor %}
         </tbody>
       </table>
-
     </div>
   </div>
+  {% endif %}
 
 </div>
 
