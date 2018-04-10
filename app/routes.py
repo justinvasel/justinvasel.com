@@ -20,6 +20,10 @@ def code():
 def cv():
     return render_template('cv.html', title='Curriculum Vitae')
 
+@app.route('/events')
+def events():
+    return render_template('events.html', title='Events')
+
 @app.route('/research')
 def research():
     return render_template('research.html', title='Research')
