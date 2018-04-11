@@ -4,12 +4,13 @@ from datetime import datetime
 
 # - - - Routes - - -
 # .............................................................................
+# FOR MAINTENANCE ONLY
+# @app.route('/')
+# def index():
+#     return render_template('maintenance.html', title = 'Maintenance')
+
 @app.route('/')
 def index():
-    return render_template('maintenance.html', title = 'Maintenance')
-
-@app.route('/about')
-def about():
     return render_template('index.html')
 
 @app.route('/cat')
