@@ -36,10 +36,6 @@ def events():
 
     return render_template('events.html', title='Events', upcoming_events=upcoming_events, past_events=past_events)
 
-@app.route('/outreach')
-def outreach():
-    return render_template('outreach.html', title='Outreach')
-
 @app.route('/research')
 def research():
     return render_template('research.html', title='Research')
