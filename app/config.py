@@ -5,6 +5,8 @@ import os
 # Basics
 BASEDIR      = os.path.abspath(os.path.dirname(__file__))
 
+SECRET_KEY = ''
+
 # DATABASE
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASEDIR, 'data/app.db')
 SQLALCHEMY_ECHO         = False
