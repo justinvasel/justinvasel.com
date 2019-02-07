@@ -1,7 +1,9 @@
 from flask import render_template, redirect, request, url_for
 from flask_login import current_user, login_user, logout_user
-from app import app, models, db, forms
+from app import app, config, db, forms, models
 from datetime import datetime
+
+from app import helpers
 
 # - - - Routes - - -
 # .............................................................................
@@ -28,7 +30,8 @@ def contact():
 
 @app.route('/cv')
 def cv():
-    return render_template('cv.html', title='Curriculum Vitae')
+    gh_tag_latest = helpers.GetLatestGithubRelease(app.config['CV_GITHUB_REPO'])
+    return render_template('cv.html', title='Curriculum Vitae', gh_tag_latest=gh_tag_latest, config=app.config)
 
 @app.route('/events')
 def events():
