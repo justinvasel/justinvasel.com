@@ -57,16 +57,20 @@
         <tbody>
           {% for event in upcoming_events %}
           <tr>
-            <td class="date" style="min-width: 120px;">{{ event[0].date }}</td>
+            <td class="date" style="width: 150px;">{{ event.date }}</td>
             <td>
-              {{ event[0].name }} —
-              <span class="text-nowrap text-muted">{{ event[0].location }}</span>
+              {{ event.name }} —
+              <span class="text-nowrap text-muted">{{ event.location }}</span>
             </td>
             <td>
-              {% if event[0].type %}
-              <strong>{{ event[1].name | safe | capitalize }}</strong> —
+              {% if event.type %}
+              <strong>{{ event.type.name | safe | capitalize }}</strong>
+              {% if event.qual %}
+              <small>({{ event.qual.name }})</small>
               {% endif %}
-              {{ event[0].description | safe }}
+              —
+              {% endif %}
+              {{ event.description | safe }}
             </td>
           </tr>
           {% endfor %}
@@ -103,16 +107,24 @@
         <tbody>
           {% for event in past_events %}
           <tr>
-            <td class="date" style="min-width: 120px;">{{ event[0].date }}</td>
+            <td class="date" style="width: 150px;">{{ event.date }}</td>
             <td>
-              {{ event[0].name }} —
-              <span class="text-nowrap text-muted">{{ event[0].location }}</span>
+              {{ event.name }} —
+              <span class="text-nowrap text-muted">{{ event.location }}</span>
             </td>
             <td>
-              {% if event[0].type %}
-              <strong>{{ event[1].name | safe | capitalize }}</strong> —
+              {% if event.type %}
+              <strong>{{ event.type.name | safe | capitalize }}</strong>
+              {% if event.qual %}
+              <small>({{ event.qual.name }})</small>
               {% endif %}
-              {{ event[0].description | safe }}
+              —
+              {% endif %}
+              {% if event.type.name != 'trip' %}
+              <em>{{ event.description | safe }}</em>
+              {% else %}
+              {{ event.description | safe }}
+              {% endif %}
             </td>
           </tr>
           {% endfor %}

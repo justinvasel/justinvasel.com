@@ -1,0 +1,33 @@
+{% extends "page.html" %}
+
+{% block content %}
+<div class="container serif bg-page pt-4 pb-4 rounded-bottom">
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <h1>Sign In</h1>
+      <form action="" method="post" novalidate>
+        <div class="form-group">
+          {{ form.hidden_tag() }}
+          <p>
+              {{ form.username.label }}<br>
+              {{ form.username(size=32, class='form-control') }}<br>
+              {% for error in form.username.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              {{ form.password.label }}<br>
+              {{ form.password(size=32, class='form-control') }}<br>
+              {% for error in form.password.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>{{ form.submit(class='btn btn-success') }}</p>
+        </div>
+      </form>
+    </div>
+    <div class="col-4"></div>
+  </div>
+</div>
+{% endblock %}
