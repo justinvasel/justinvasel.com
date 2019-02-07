@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 activate_this = 'env/bin/activate_this.py'
-execfile(activate_this, dict(__file__=activate_this))
+exec(open(activate_this).read())
 
 import sys
 import logging
