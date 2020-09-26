@@ -1,9 +1,11 @@
 # Global
 *.DS_Store
 *.pyc
+*.psd
 
 # Directory structure
 env
+ideas
 
 # Data-related
 app/data/app.db

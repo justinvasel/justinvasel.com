@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
 {% block page %}
-<div class="container bg-nav pt-3 border-bottom border-secondary">
-  <div class="row">
-    <div class="col-12">
-      <h1 class="display-3 serif text-center">Justin Vasel</h1>
-      <h6 class="serif text-center text-muted">~ <em>Physics Ph.D. Candidate</em> ~</h6>
+<div class="container pt-3" style="margin-top: 100px;">
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-12 text-center">
+      <h1 class="display-1" style="margin-bottom: -10px;">Justin Vasel</h1>
+      <div class="text-muted mb-4">
+        <em>
+          high-energy physics &nbsp;•&nbsp; science policy &nbsp;•&nbsp; national security
+        </em>
+      </div>
+
       <h6 class="text-center social-media-links">
         <a href="https://www.twitter.com/justinvasel" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Twitter">
           <i class="fab fa-twitter"></i>
@@ -28,58 +33,30 @@
         <a href="https://scholar.google.com/citations?user=E9yWhq0AAAAJ" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Google Scholar">
           <i class="fab fa-google"></i>
         </a> &nbsp;
-        <!-- re-activate this when (if?) ready
-        <a href="#" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Blog (Coming Soon)">
-          <span class="math">\(\oint\)</span>
+        <a href="mailto:justin.vasel@gmail.com" target="_blank" data-toggle="tooltip" data-placement="bottom" title="justin.vasel@gmail.com">
+          <i class="fa fa-envelope"></i>
         </a> &nbsp;
-        -->
       </h6>
     </div>
   </div>
-
-  <ul class="nav justify-content-center serif">
-    <li class="nav-item">
-      <a class="nav-link" href="/">About</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/cv">CV</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/research">Research</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/events">Events</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/contact">Contact</a>
-    </li>
-    <!-- re-activate this when (if?) ready
-    <li class="nav-item">
-      <a class="nav-link text-dark" href="#" data-toggle="tooltip" data-placement="bottom" title="Coming Soon">Blog</a>
-    </li>
-    -->
-  </ul>
-</div>
 
 {% block content %}
 <!-- Page content goes here -->
 {% endblock %}
 
-<div class="container mt-5">
+<div class="container-fluid" style="margin-top: 200px;">
   <div class="row">
     <div class="col-12">
-      <hr>
+      <br>
       <p class="text-center text-muted">
-        <strong>&copy; 2018 JUSTIN VASEL</strong><br>
-        <span class="mono"><small>&lt;justin <strong>[dot]</strong> vasel <strong>[at]</strong> gmail <strong>[dot]</strong> com&gt;</small></span><br>
         <small>
           <a href="https://github.com/justinvasel/justinvasel.com" target="_blank">
-            <i class="fa fa-code-branch"></i> Fork me on <i class="fab fa-github"></i> Github
+            <i class="fa fa-code-branch"></i> Find this site on <i class="fab fa-github"></i> Github
           </a>
-          <br><br>
+          <br>
           <span class="mono">
             v{{ config.VERSION }}
-            <br><br>
+            <br>
             :wq
           </span>
         </small>
