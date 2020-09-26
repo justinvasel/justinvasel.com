@@ -2,96 +2,92 @@
 
 {% block content %}
 
-<div class="container serif bg-page pt-4 pb-4 rounded-bottom">
-  <div class="row">
-    <div class="col-12">
-      <h1>Who am I?</h1>
+<div class="container pt-4 pb-4">
 
-      <hr>
-      <figure class="figure float-left mr-3" style="width: 30%;">
-        <img class="figure-img rounded border" src="{{ url_for('static', filename='img/vasel.jpg') }}" width="100%">
-        <figcaption class="figure-caption">
-          <em>Fig. 1:</em> There I am. <em>(Photo credit: Filip Jediny)</em>
-        </figcaption>
-      </figure>
+  <div class="row mt-4">
+    <div class="col-6 border-right pr-4">
+      <div class="text-center">
+        <h4>Ph.D. Physics Candidate</h4>
+        <h5><em>Indiana University</em></h5>
+        <img class="rounded" src="{{ url_for('static', filename='img/iu_banner.png') }}" width=100%;>
+      </div>
 
-      <h2>
-        I'm Justin. I do physics and stuff.
-      </h2>
-
-      <p class="readable">
-        More specifically, I am a Ph.D.
-        Candidate at Indiana University studying supernova neutrinos. I work on
-        the NOvA long-baseline oscillation experiment full-time and moonlight at
-        the HALO supernova neutrino detector at SNOLAB.
+      <br>
+      <p>
+        For my Ph.D. research, I am preparing the NOvA neutrino detectors for
+        the next galactic core-collapse supernova and exploring their sensitivity
+        to underlying physics for a selection of supernova models and progenitor
+        distances. A major component of this research is separating the faint
+        signal in the presence of a large background, a "needle in a haystack"
+        sort of problem. As a part of this effort, NOvA interfaces with the
+        SuperNova Early Warning System (SNEWS), a global network of neutrino
+        detectors dedicated to alerting global neutrino and astronomical
+        communities to an imminent supernova.
       </p>
 
-      <p class="readable">
-        You can read more about that on the <a href="/research">Research</a>
-        page.
+      <p>
+        • <a href="https://physics.indiana.edu/" target="_blank">Learn more about Indiana University's Physics program</a><br>
+        • <a href="https://novaexperiment.fnal.gov/" target="_blank">Learn more about the NOvA neutrino experiment</a><br>
+        • <a href="https://snews.bnl.gov/" target="_blank">Learn more about the SuperNova Early Warning System (SNEWS)</a>
+      </p>
+    </div>
+
+    <div class="col-6 pl-4">
+      <div class="text-center">
+        <h4>Technology and National Security Fellow</h4>
+        <h5><em>National Security Innovation Network</em></h5>
+        <img class="rounded" src="{{ url_for('static', filename='img/tnsf_banner.png') }}" width=100%;>
+      </div>
+
+      <br>
+      <p>
+        As a TNSF fellow, I am applying my training as a physicist to U.S.
+        national security challenges with the Office of the Assistant Secretary
+        of the Air Force for Installations, Environment, and Energy (SAF/IE).
       </p>
 
-      <p class="readable">
-        Hailing from the great state of Wisconsin, I'm an avid cheesehead,
-        midwestern-polite to a fault, and a firm believer in the
-        <a href="http://www.themidwestival.com/blog/2015/1/15/the-wisconsin-old-fashioned-an-abridged-history" target="_blank">
-          Brandy Old Fashioned
-        </a>
-        (as opposed to lesser variants).
+      <p>
+        • <a href="https://www.nsin.us/tnsf/" target="_blank">Learn more about the Technology and National Security Fellowship</a><br>
+        • <a href="https://www.nsin.us/" target="_blank">Learn more about the National Security Innovation Network</a><br>
+        • <a href="https://www.safie.hq.af.mil/" target="_blank">Learn more about SAF/IE</a>
       </p>
+    </div>
+  </div>
 
-      <p class="readable">
-        When I'm not physics-ing to pay the bills, I can be spotted working on
-        a variety of hobbies depending on my mood, including but not limited to:
-        physics-ing for fun, reading (Goodreads me), programing personal
-        (Github me) projects, writing, buying strawberry rhubarb jam at the
-        farmer's market, and playing Civilization, the greatest video game
-        franchise known to human-kind.
+  <div class="row bg-page pt-3 pb-3 border rounded" style="margin-top: 75px;">
+    <div class="col-3">
+      <img class="rounded" src="{{ url_for('static', filename='img/vasel.png') }}" width=100%;>
+    </div>
+    <div class="col-9">
+      <h3>Hi, I'm Justin 👋</h3>
+      <p>
+        I am an experimental particle physicist by
+        training with an interest in where physics and government intersect,
+        especially as it relates to issues of national security. I am currently
+        working in that space as a
+        <a href="https://www.nsin.us/tnsf/" target="_blank">Technology and
+        National Security Fellow</a> with the
+        <a href="https://www.nsin.us/" target="_blank">National Security
+        Innovation Network</a> within the U.S. Department of Defense.
       </p>
-
-      <p class="readable">
-        One of my favorite pastimes is website building. I've been creating
-        websites since the era of Angelfire and Geocities (and Homestead) and I
-        just kept at it through the years picking up new technologies as they've
-        developed. To my surprise, this eneded up being a pretty useful skill,
-        and I've put it to use in a professional context through the development
-        of monitoring and information systems at several neutrino experiments.
-        Web design also provides a great creative outlet for me; something that
-        I believe is an important but undervalued aspect of being a scientist.
+      <p>
+        In physics, I have been deeply involved in efforts to detect neutrinos
+        from the next galactic core-collapse supernova as a member of the
+        <a href="https://novaexperiment.fnal.gov/" target="_blank">NOvA</a>,
+        <a href="https://www.snolab.ca/halo/" target="_blank">HALO</a>, and
+        <a href="https://snews.bnl.gov/" target="_blank">SNEWS</a>
+        collaborations.
       </p>
-
-      <p class="readable">
-        I strongly believe that it is important to give back to the communities
-        of which one is a part. I have primarily tended to this responsibility
-        through civil service and outreach efforts. Over the years, I have
-        served as a leader in a variety of organizations and I tend to approach
-        leadership with the "leave it better than found you it" philosophy, both
-        in terms of the organization itself and the community which it serves.
+      <p>
+        I also enjoy outreach, and try to give talks to the general public
+        whenever I get the chance. In the meantime, I post about science and my
+        work on social media, particualrly Twitter
+        (<a href="https://www.twitter.com/justinvasel" target="_blank">@justinvasel</a>).
       </p>
-
-      <p class="readable">
-        As for outreach, I believe as scientists we have a responsibility to
-        interface with the general public. After all, they pay for our salaries
-        and lab equipment, and who would want to pass up an opportunity to
-        inspire young, curious minds? I try to take advantage of opportunities
-        to share my enthusiasm and work with the general public when they
-        present themselves, often in the form of ask-a-scientist style talks.
-        In addition to that, I've volunteered at local astronomy days and for
-        programs like adopt-a-physicist. More recently, I've turned some
-        attention to reaching a wider audience through social media. That's a
-        work in progress, but an important one in these days.
+      <p>
+        If you would like to reach out, you can reach me by
+        <a href="mailto:justin.vasel@gmail.com" target="_blank">email</a>.
       </p>
-
-      <p class="readable">
-        Well that's about it for this page. I'm glad you're here and hope you
-        enjoy the rest of your stay.
-      </p>
-
-      <p class="readable">
-        Stay as long as you'd like and feel free to
-        pet the <a href="/cat">Cat</a> if you see him wandering around.
-      </p>
-
     </div>
   </div>
 </div>
