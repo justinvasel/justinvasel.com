@@ -1,7 +1,12 @@
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-image: url('../img/bg.png');
-  background-repeat: repeat;
+  font-family: 'Helvetica Neue', sans-serif;
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  /* background-image: url('../img/bg-dark.png');
+  background-repeat: repeat; */
+  /* background-color: #111; */
+  background-color: #eee;
+  /* color: #eee; */
+  color: #111;
 }
 
 .readable {
@@ -26,10 +31,12 @@ a:hover {
 
 .social-media-links a {
   color: #666;
+  /* color: #ccc; */
 }
 
 .social-media-links a:hover {
-  color: #111;
+  color: #6b1818;
+  /* color: #999; */
 }
 
 .bg-nav {
