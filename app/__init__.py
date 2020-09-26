@@ -1,6 +1,6 @@
 # Using "Semantic Versioning": MAJOR.MINOR.PATCH form.
 # See: https://semver.org/ for more details.
-__version__ = '3.0.0'
+__version__ = '3.0.1'
 
 
 # -*- coding: utf-8 -*-
