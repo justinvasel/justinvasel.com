@@ -4,6 +4,7 @@
 
 # Directory structure
 env
+ideas
 
 # Data-related
 app/data/app.db
